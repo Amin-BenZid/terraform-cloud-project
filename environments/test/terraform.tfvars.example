@@ -1,0 +1,19 @@
+# Copy to terraform.tfvars for local use.
+# NEVER put db_password here! Set $env:TF_VAR_db_password="YourStrongPassword123!" before running Terraform.
+
+aws_region              = "us-east-1"
+project_name            = "cloud5"
+environment             = "test"
+owner                   = "aminebenzid"
+vpc_cidr                = "10.21.0.0/16"
+single_nat_gateway      = true
+instance_type           = "t3.micro"
+min_size                = 2
+max_size                = 4
+desired_capacity        = 2
+db_instance_class       = "db.t3.micro"
+multi_az                = false
+backup_retention_period = 3
+skip_final_snapshot     = true
+deletion_protection     = false
+use_existing_lab_role   = true
